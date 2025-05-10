@@ -10,4 +10,4 @@ This attempt is updated, exhaustive, and as unopinionated as I could make it. It
 
 ## Usage
 
-Extract this as its own folder inside the `mods/` directory of the Homestuck Collection Asset Pack. The path `[...]/mods/homestuck-slur-removal-mod/mod.js` should be valid.
+Extract the [source code zip](https://github.com/recordcrash/homestuck-slur-removal-mod/releases) as its own folder inside the `mods/` directory of the Homestuck Collection Asset Pack. The path `[...]/mods/homestuck-slur-removal-mod/mod.js` should be valid.
