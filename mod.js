@@ -85,7 +85,7 @@ module.exports = {
 			"005261", "005769", "005873", "007380",
 		], r_word_caps)
 
-		if(store.get("censorFutureArachnidsGrip"))
+		if(store.get("censorFutureArachnidsGrip", true))
 		   censorTermsInPages(["004447", "004654"], f_word_caps);
 
 		censorTermsInPages(["004529"], r_word_terezi)
