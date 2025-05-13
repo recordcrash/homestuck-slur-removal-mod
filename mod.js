@@ -1,7 +1,7 @@
 module.exports = {
 	title: "Homestuck Slur Removal Mod",
 	author: "Makin",
-	modVersion: 1.0,
+	modVersion: 1.1,
 	description: `<p>This is an Unofficial Homestuck Collection mod that censors all the slurs in Homestuck and other Hussie works. Nothing more, nothing less. This is an unopinionated approach: it replaces r-words, n-words and homophobic f-words with asterisked versions, in both text and multimedia.</p><p>I don't recommend using this mod, since Homestuck is a 2009 time capsule and best experienced as a product of its time, this is only a reasonable option for those who feel like they *must* install something.</p><p>I'm open to all feedback and criticism on <a href="https://github.com/recordcrash/homestuck-slur-removal-mod">Github</a>!</p>`,
 	settings: {
 		boolean: [
