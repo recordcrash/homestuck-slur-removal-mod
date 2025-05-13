@@ -3,6 +3,19 @@ module.exports = {
 	author: "Makin",
 	modVersion: 1.0,
 	description: `<p>This is an Unofficial Homestuck Collection mod that censors all the slurs in Homestuck and other Hussie works. Nothing more, nothing less. This is an unopinionated approach: it replaces r-words, n-words and homophobic f-words with asterisked versions, in both text and multimedia.</p><p>I don't recommend using this mod, since Homestuck is a 2009 time capsule and best experienced as a product of its time, this is only a reasonable option for those who feel like they *must* install something.</p><p>I'm open to all feedback and criticism on <a href="https://github.com/recordcrash/homestuck-slur-removal-mod">Github</a>!</p>`,
+	settings: {
+		boolean: [
+			{ model: "censorFutureArachnidsGrip",
+			  label: "Censor FUTURE arachnidsGrip",
+			  desc: "Check to censor initialism of FUTURE arachnidsGrip." }
+		]
+	},
+	computed(api) {
+		store = api.store
+
+		// Default to on
+		store.set("censorFutureArachnidsGrip", store.get("censorFutureArachnidsGrip", true))
+	},
 	trees: {
 		'./advimgs/': 'assets://advimgs/',
 		'./archive/comics/': 'assets://archive/comics/',
@@ -71,7 +84,10 @@ module.exports = {
 		censorTermsInPages(["004443", "004529", "004690", "004751", "004752", "004829", "005152",
 			"005261", "005769", "005873", "007380",
 		], r_word_caps)
-		censorTermsInPages(["004447", "004654"], f_word_caps)
+
+		if(store.get("censorFutureArachnidsGrip", true))
+		   censorTermsInPages(["004447", "004654"], f_word_caps);
+
 		censorTermsInPages(["004529"], r_word_terezi)
 		censorTermsInPages(["004072"], r_word_vriska)
 		censorTermsInPages(["002729"], f_word)
